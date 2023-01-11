@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-import tensorflow as tf
 
 file = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
