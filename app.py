@@ -12,6 +12,7 @@ if file is not None:
         image,
         caption=f"You amazing image has shape",
         use_column_width=True,
+        key="question"
     )
 
     img_array = np.array(image)
