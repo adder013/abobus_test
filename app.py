@@ -18,6 +18,6 @@ if file is not None:
     img = tf.image.resize(img_array, size=(224,224))
     img = tf.expand_dims(img, axis=0)
 
-if st.session_state.image:
-    answer_dict = (Prediction.get_model()(image=st.session_state.imag))
-    st.text_input('Ответ', value=answer_dict['answer'], disabled=True)
+
+answer_dict = (Prediction.get_model()(image=st.session_state.image))
+st.text_input('Ответ', value=answer_dict['answer'], disabled=True)
