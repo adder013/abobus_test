@@ -1,4 +1,3 @@
-from streamlit.ReportThread import get_report_ctx
 from functools import cache
 import streamlit as st
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
