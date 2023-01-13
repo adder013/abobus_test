@@ -12,7 +12,6 @@ if file is not None:
         image,
         caption=f"You amazing image has shape",
         use_column_width=True,
-        key="question"
     )
 
     img_array = np.array(image)
@@ -20,5 +19,5 @@ if file is not None:
     img = tf.expand_dims(img, axis=0)
 
 
-answer_dict = (Prediction.get_model()(image=st.session_state.image))
+answer_dict = (Prediction.get_model()(image=st.image))
 st.text_input('Ответ', value=answer_dict['answer'], disabled=True)
