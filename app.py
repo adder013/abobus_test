@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-from model import Prediction, MODEL
+from model import Prediction
 
 file = st.file_uploader("Upload an image", type=["png", "jpg", "jpeg"])
 
