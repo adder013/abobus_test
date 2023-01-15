@@ -13,9 +13,11 @@ class Prediction:
     def get_model():
         tokenizer = AutoTokenizer.from_pretrained(MODEL)
         nlp = pipeline("image-to-text", model="nlpconnect/vit-gpt2-image-captioning", tokenizer=tokenizer)
+        return nlp
 
     @staticmethod
     def get_prediction(image: Image):
         if not image: return
         image_to_text = Prediction.get_model()
-        return image_to_text(image)
+        tempVar = image_to_text(image)
+        return tempVar
