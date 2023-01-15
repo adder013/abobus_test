@@ -11,10 +11,8 @@ class Prediction:
     @cache
     @st.cache(allow_output_mutation=True)
     def get_model():
-        model = VisionEncoderDecoderModel.from_pretrained(MODEL)
-        feature_extractor = ViTFeatureExtractor.from_pretrained(MODEL)
         tokenizer = AutoTokenizer.from_pretrained(MODEL)
-        nlp = pipeline("image-to-text", model=model, tokenizer=tokenizer, feature_extractor=feature_extractor)
+        nlp = pipeline("image-to-text", model=model, tokenizer=tokenizer)
 
     @staticmethod
     def get_prediction(image: Image):
