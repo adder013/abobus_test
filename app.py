@@ -14,10 +14,6 @@ if file is not None:
         use_column_width=True,
     )
 
-    img_array = np.array(image)
-    img = tf.image.resize(img_array, size=(224,224))
-    img = tf.expand_dims(img, axis=0)
-
 if st.session_state.image and st.session_state.context:
     answer_dict = (Prediction.get_prediction(st.image))
     st.text_input('Ответ', value=answer_dict['answer'], disabled=True)
