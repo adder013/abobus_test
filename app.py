@@ -15,5 +15,6 @@ if file is not None:
     )
 
 if st.session_state.image:
-    answer_dict = (Prediction.get_prediction(image))
+    answer_dict = (Prediction.get_prediction(image)[0])
+    
     st.text_input('Ответ', value=answer_dict['generated-text'], disabled=True)
