@@ -12,7 +12,7 @@ class Prediction:
     @st.cache(allow_output_mutation=True)
     def get_model():
         tokenizer = AutoTokenizer.from_pretrained(MODEL)
-        nlp = pipeline("image-to-text", model=model, tokenizer=tokenizer)
+        nlp = pipeline("image-to-text", model="nlpconnect/vit-gpt2-image-captioning", tokenizer=tokenizer)
 
     @staticmethod
     def get_prediction(image: Image):
