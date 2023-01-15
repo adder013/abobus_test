@@ -19,5 +19,5 @@ if file is not None:
     img = tf.expand_dims(img, axis=0)
 
 
-answer_dict = (Prediction.get_model()(image=st.image))
+answer_dict = (Prediction.get_prediction(st.image))
 st.text_input('Ответ', value=answer_dict['answer'], disabled=True)
